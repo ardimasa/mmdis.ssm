@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SSM</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    </head>
+     
+    <body>
+
+        <div class="jumbotron text-center">
+            <h3><b>SSM Payment Gateway</b></h3> 
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                </div>
+
+                <form action="http://mini.mydata-ssm.com.my/entityRedirect" method="POST">
+                    <!-- column 1-->
+                    <div class="col-sm-3"> 
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="text" class="form-control" id="email" placeholder="Email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Username" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="requestId">Request ID</label>
+                            <input type="text" class="form-control" id="requestId" placeholder="Request ID" name="requestId">
+                        </div>
+                        <div class="form-group">
+                            <label for="clientId">Client ID</label>
+                            <input type="text" class="form-control" id="clientId" value="1" readonly="readonly" name="clientId">
+                        </div>
+
+                        <div class="form-group"> 
+                            <input type="hidden" name="redirectUrl" value="http://202.129.173.69:8080/MMDIS_SSM/index.html" /><br />
+                        </div>
+
+                    </div>
+
+                    <!-- colum 2-->
+                    <div class="col-sm-3"> 
+
+                        <div class="form-group">
+                            <label for="entityNo">Entity No</label>
+                            <input type="text" class="form-control" id="entityNo" placeholder="Entity No" name="docReq[0][entityNo]">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkDigit">Check Digit</label>
+                            <input type="text" class="form-control" id="checkDigit" placeholder="Check Digit" name="docReq[0][checkDigit]">
+                        </div>
+                        <div class="form-group">
+                            <label for="productId">Product ID</label>
+                            <input type="text" class="form-control" id="productId" placeholder="Product ID" name="docReq[0][productId]">
+                        </div>
+                        <div class="form-group">
+                            <label for="language">Language</label>
+                            <input type="text" class="form-control" id="language" placeholder="Language" name="docReq[0][language]">
+                        </div>
+                        <div class="form-group">
+                            <label for="isCertified">Certified True Copy</label>
+                            <input type="text" class="form-control" id="isCertified" placeholder="" name="docReq[0][isCertified]">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-success">Submit</button>
+
+                    </div>
+                </form> 
+
+                <div class="col-sm-3">
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
